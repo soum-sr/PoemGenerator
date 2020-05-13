@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
 def poem_generator():
-	user_input = input("Write the first line of your poem, the poem generator will complete it!!   ")
+	user_input = input("Write the first line of your poem, the poem generator will complete it!! \n>>  ")
 	in_text = user_input.lower()
 	sys.stdout.write('\n\nYour Poem\n\n')
 	start = ' '+ in_text+'\n'
@@ -31,7 +31,7 @@ def poem_generator():
             
 		sys.stdout.write(out_word)
 		sys.stdout.flush()
-
+	sys.stdout.write('\n\n')
 with open('tokenizer.pkl' , 'rb') as f:
 	tokenizer = pickle.load(f)
 
