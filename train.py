@@ -23,7 +23,14 @@ def train(model, batch_size, epochs, learning_rate,X,y):
 path = 't8.shakespeare.txt'
 sentences = process_data(path)
 tokenizer, numeric_sentences = tokenize_sentence(sentences)
-X,y,vocabulary_size = create_training_data(tokenizer, numeric_sentences)
+X,y,vocabulary_size,input_length = create_training_data(tokenizer, numeric_sentences)
 
+model = build_rnn_model(vocabulary_size,input_length)
+print("--"*10)
+print("Starting the traing of the model: ")
+print("--"*10)
 
-model = build_rnn_model()
+batch_size = 128
+epochs = 150
+learning_rate = 0.0009
+train(model, batch_size, epochs, learning_rate, X,y)

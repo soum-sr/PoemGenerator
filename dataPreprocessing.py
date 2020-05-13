@@ -32,7 +32,8 @@ def create_training_data(tokenizer, numeric_sentences):
 	data_array = np.array(numeric_sentences)
 	X, y = data_array[:,:-1], data_array[:,-1]
 	y = to_categorical(y, num_classes=vocabulary_size)
-	return X, y, vocabulary_size
+	input_length = X.shape[1]
+	return X, y, vocabulary_size,input_length
 
 
 
