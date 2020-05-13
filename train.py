@@ -32,7 +32,7 @@ print("Starting the traing of the model: ")
 print("--"*10)
 
 batch_size = 128
-epochs = 150
+epochs = 10
 learning_rate = 0.0009
 train(model, batch_size, epochs, learning_rate, X,y)
 

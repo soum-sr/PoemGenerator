@@ -1,6 +1,7 @@
+import tensorflow as tf
+tf.get_logger().setLevel('ERROR')
 from tensorflow.keras.layers import Dense, SimpleRNN, Embedding
 from tensorflow.keras.models import Sequential
-
 
 def build_rnn_model(vocabulary_size,input_length):
 	model = Sequential()
