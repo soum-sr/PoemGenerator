@@ -1,4 +1,5 @@
 import tensorflow as tf
+from pickle import dump
 from buildModel import build_rnn_model
 from dataPreprocessing import process_data,create_training_data
 from tokenize_sentence import tokenize_sentence
@@ -34,3 +35,10 @@ batch_size = 128
 epochs = 150
 learning_rate = 0.0009
 train(model, batch_size, epochs, learning_rate, X,y)
+
+# Dump the tokenizer
+print("--"*10)
+print("Saving tokenizer... ")
+dump(tokenizer, open('tokenizer.pkl', 'wb'))
+print("Tokenizer saved!!")
+print("--"*10)
