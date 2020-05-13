@@ -1,7 +1,7 @@
 import tensorflow as tf
 from buildModel import build_rnn_model
 from dataPreprocessing import process_data,create_training_data
-from tokenize import tokenize_sentence
+from tokenize_sentence import tokenize_sentence
 
 def train(model, batch_size, epochs, learning_rate,X,y):
 	optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
@@ -18,7 +18,7 @@ def train(model, batch_size, epochs, learning_rate,X,y):
 	return history, model
 
 ### TODO: Make all inputs from ARG
-
+print("We are here")
 # Processing data
 path = 't8.shakespeare.txt'
 sentences = process_data(path)

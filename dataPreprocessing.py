@@ -1,6 +1,6 @@
 import numpy as np 
 from tensorflow.keras.utils import to_categorical
-
+print("We are good in data preprocessing")
 
 def clean_text(text):
     words = text.split()
