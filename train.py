@@ -1,3 +1,6 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+
 import tensorflow as tf
 from pickle import dump
 from buildModel import build_rnn_model
@@ -32,7 +35,7 @@ print("Starting the traing of the model: ")
 print("--"*10)
 
 batch_size = 128
-epochs = 10
+epochs = 150
 learning_rate = 0.0009
 train(model, batch_size, epochs, learning_rate, X,y)
 
