@@ -9,12 +9,12 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
 
-def poem_generator():
-	user_input = input("Write the first line of your poem, the poem generator will complete it!! \n>>  ")
+def poem_generator(input_sentence):
+	user_input = input_sentence
+	output = ""
 	in_text = user_input.lower()
-	sys.stdout.write('\n\nYour Poem\n\n')
 	start = ' '+ in_text+'\n'
-	sys.stdout.write(start)
+	output += start
 	for i in range(99):
 		encoded = tokenizer.texts_to_sequences([in_text])[0]
 		encoded = pad_sequences([encoded], maxlen = input_length, truncating = 'pre')
@@ -28,10 +28,11 @@ def poem_generator():
 		out_word = ' ' + out_word
 		if i % 7 ==0 and i !=0:
 			out_word = out_word + '\n'
-            
-		sys.stdout.write(out_word)
-		sys.stdout.flush()
-	sys.stdout.write('\n\n')
+		output += out_word
+		
+	return output 
+
+		
 	
 with open('tokenizer.pkl' , 'rb') as f:
 	tokenizer = pickle.load(f)
@@ -42,4 +43,4 @@ model = build_rnn_model(vocabulary_size, input_length)
 model.load_weights('model_RNN_Shakespeare.h5')
 
 # Generate poem
-poem_generator()
+print(poem_generator('This is the wrath of power'))
