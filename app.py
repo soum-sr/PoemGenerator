@@ -1,8 +1,20 @@
+import pickle
 from flask import Flask 
 from flask import render_template, request
+from buildModel import build_rnn_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from generate_app import poem_generator
+
 app = Flask(__name__)
 
+	
+with open('tokenizer.pkl' , 'rb') as f:
+	tokenizer = pickle.load(f)
 
+vocabulary_size = len(tokenizer.word_index) + 1
+input_length = 10
+model = build_rnn_model(vocabulary_size, input_length)
+model.load_weights('model_RNN_Shakespeare.h5')
 
 @app.route('/', methods=['GET','POST'])
 def index():

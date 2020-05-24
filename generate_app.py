@@ -1,15 +1,7 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
-import pickle
-import sys
-import os
-from buildModel import build_rnn_model
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-
-
-
-def poem_generator(input_sentence):
+def poem_generator(input_sentence,model,tokenizer):
 	user_input = input_sentence
 	output = ""
 	in_text = user_input.lower()
@@ -29,18 +21,10 @@ def poem_generator(input_sentence):
 		if i % 7 ==0 and i !=0:
 			out_word = out_word + '\n'
 		output += out_word
-		
+
 	return output 
 
-		
 	
-with open('tokenizer.pkl' , 'rb') as f:
-	tokenizer = pickle.load(f)
-
-vocabulary_size = len(tokenizer.word_index) + 1
-input_length = 10
-model = build_rnn_model(vocabulary_size, input_length)
-model.load_weights('model_RNN_Shakespeare.h5')
 
 # Generate poem
 print(poem_generator('This is the wrath of power'))
