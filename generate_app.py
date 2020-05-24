@@ -1,7 +1,8 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-def poem_generator(input_sentence,model,tokenizer):
+def poem_generator(input_sentence,model,tokenizer,input_length):
 	user_input = input_sentence
 	output = ""
 	in_text = user_input.lower()
@@ -25,6 +26,3 @@ def poem_generator(input_sentence,model,tokenizer):
 	return output 
 
 	
-
-# Generate poem
-print(poem_generator('This is the wrath of power'))

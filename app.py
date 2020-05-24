@@ -2,7 +2,7 @@ import pickle
 from flask import Flask 
 from flask import render_template, request
 from buildModel import build_rnn_model
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+
 from generate_app import poem_generator
 
 app = Flask(__name__)
@@ -20,7 +20,10 @@ model.load_weights('model_RNN_Shakespeare.h5')
 def index():
 	if request.method == "POST":
 		sentence = request.form['line_input']
-		output = 
+		if len(sentence) != 0:
+			output = poem_generator(sentence, model, tokenizer,input_length) 
+			return render_template('index.html', output=output)
+		
 	return render_template('index.html')
 
 if __name__ == '__main__':
