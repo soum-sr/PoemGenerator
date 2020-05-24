@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Poem Generator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intital-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">Poem Generator</div>
+		<div class="input_data">
+			<form action="{{url_for('index')}}" id="upload-form" method="POST">
+				<label for="first_line">Enter the first line of Poem</label>
+				<input type="text" id="first_line" name="line_input">
+				<input class="submit_button" id="submit_input" type="submit" value="Submit">
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>
