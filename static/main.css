@@ -5,7 +5,9 @@ body{
 .header{
     text-align: center;
     font-size: 48px;
-    color:white;
+    font-family: 'Satisfy', cursive;
+    font-weight: 900;
+    color:#fff;
 }
 .form__group {
     position: relative;
@@ -17,12 +19,12 @@ body{
   }
   
   .form__field {
-    font-family: monospace;
+    font-family: 'Satisfy', cursive;
     width: 100%;
     border: 0;
     border-bottom: 2px solid #9b9b9b;
     outline: 0;
-    font-size: 1.8rem;
+    font-size: 25px;
     color: #fff;
     padding: 7px 0;
     background: transparent;
@@ -87,9 +89,9 @@ body{
 
 .out_text{
     white-space: pre-line;
-    font-size:20px;
-    font-family: monospace;
+    font-size:30px;
+    font-family: 'Satisfy', cursive;
     color:#fff;
-    word-spacing: -2px;
-    font-weight: 800;
+    /* word-spacing: -2px; */
+    font-weight: 600;
 }
