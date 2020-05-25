@@ -12,11 +12,12 @@
 		<div class="header">Poem Generator</div>
 		<div class="input_data">
 			<form action="{{url_for('index')}}" id="upload-form" method="POST">
-				<label for="first_line">Enter the first line of Poem</label>
+				<p>Enter the first line of Poem</p>
 				<input type="text" id="first_line" name="line_input">
+				<br>
 				<input class="submit_button" id="submit_input" type="submit" value="Submit">
 			</form>
-			<div>
+			<div class="out_text">
 				{{output}}
 			</div>
 		</div>

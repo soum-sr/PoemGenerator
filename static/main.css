@@ -1,0 +1,29 @@
+body{
+    background-color: black !important;
+}
+.header{
+    text-align: center;
+    font-size: 48px;
+    color:white;
+    font-family: monospace;
+    font-weight: 900;
+}
+
+.input_data p{
+    font-size:25px;
+    color:white;
+    font-family: monospace;
+}
+.input_data{
+    text-align: center; 
+}
+#submit_input{
+    margin-top:10px;
+}
+
+.out_text{
+    white-space: pre-line;
+    font-size:20px;
+    color:white;
+}
+
