@@ -8,19 +8,21 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-	<div class="container">
-		<div class="header">Poem Generator</div>
-		<div class="input_data">
-			<form action="{{url_for('index')}}" id="upload-form" method="POST">
-				<p>Enter the first line of Poem</p>
-				<input type="text" id="first_line" name="line_input">
-				<br>
-				<input class="submit_button" id="submit_input" type="submit" value="Submit">
-			</form>
-			<div class="out_text">
-				{{output}}
+	<div class="header">Poem Generator</div>
+	
+	<div class="input_data">
+		<form action="{{url_for('index')}}" id="upload-form" method="POST">
+			<div class="form__group field">
+				<input type="text" class="form__field" placeholder="Enter the first line" id="first_line" name="line_input" required />
+				<label for="line_input" class="form__label">Enter the first line</label>
 			</div>
+			<br>
+			<input class="submit_button" id="submit_input" type="submit" value="Submit">
+		</form>
+		<div class="out_text">
+			{{output}}
 		</div>
 	</div>
+	
 </body>
 </html>
