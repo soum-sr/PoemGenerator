@@ -2,6 +2,8 @@
 
 #### Write like shakespeare with the power of Recurrent Neural Networks
 
+![In-use Animation](https://github.com/soum-sr/PoemGenerator/blob/master/poemGen-gif.gif?raw=true "In-use Animation")
+
 To generate poems on terminal: 
 ```
 python3 generate.py
