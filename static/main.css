@@ -2,6 +2,8 @@ body{
     background-color: black !important;
     text-align: center;justify-content: center;
 }
+
+/*Header*/
 .header {
     background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
     -webkit-background-clip: text;
@@ -39,7 +41,7 @@ body{
     }
   }
 
-
+/*Input form*/
 .form__group {
     position: relative;
     padding: 15px 0 0;
@@ -118,6 +120,7 @@ body{
       
   }
 
+/*Output Text*/
 .out_text{
     white-space: pre-line;
     font-size:30px;
