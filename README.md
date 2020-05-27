@@ -5,9 +5,8 @@
 ![In-use Animation](https://github.com/soum-sr/PoemGenerator/blob/master/poemGen-gif.gif?raw=true "In-use Animation")
 
 ### Checkout the app on heroku: https://ml-poem-generator.herokuapp.com/
-
-
-
+<br>
+<br>
 To generate poems on terminal: 
 ```
 python3 generate.py
