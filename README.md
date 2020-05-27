@@ -6,6 +6,8 @@
 
 ### Checkout the app on heroku: https://ml-poem-generator.herokuapp.com/
 
+
+
 To generate poems on terminal: 
 ```
 python3 generate.py
