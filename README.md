@@ -18,11 +18,11 @@ pip install virtualenv
 virtualenv streamlitapp
 ```
 - Start the virtual environment
- - Linux/Mac
+ * Linux/Mac
 ```
 source streamlitapp/bin/activate
 ```
- - Windows
+ * Windows
 ```
 streamlitapp\Scripts\activate
 ```
@@ -34,15 +34,15 @@ pip install -r requirements.txt
 
 ### To train the model
 ```
-python3 train.py
+python train.py
 ```
 ### To generate poems on terminal
 ```
-python3 generate.py
+python generate.py
 ```
 ### To run the flask app
 ```
-python3 app.py
+python app.py
 ```
 
 
