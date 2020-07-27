@@ -1,7 +1,7 @@
 # PoemGenerator
 <img src="https://img.shields.io/github/license/soum-sr/PoemGenerator">
 
-#### Write like shakespeare with the power of Recurrent Neural Networks
+Write like Shakespeare with the power of Recurrent Neural Networks. A flask webapp equipped with a tensorflow RNN model that takes a sentence as input and generates a poem seeded by that sentence.
 
 ![In-use Animation](https://github.com/soum-sr/PoemGenerator/blob/master/poemGen-gif.gif?raw=true "In-use Animation")
 
