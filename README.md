@@ -14,18 +14,18 @@ Write like Shakespeare with the power of Recurrent Neural Networks. A flask weba
 ```
 pip install virtualenv
 ```
-- Create a virtual environment (Here the name of the virtualenv is 'streamlitapp' you can name it whatever you want and it will be created on your pwd)
+- Create a virtual environment (Here the name of the virtualenv is 'poemgenerator' you can name it whatever you want and it will be created in your pwd)
 ```
-virtualenv streamlitapp
+virtualenv poemgenerator
 ```
 - Start the virtual environment
  * Linux/Mac
 ```
-source streamlitapp/bin/activate
+source poemgenerator/bin/activate
 ```
  * Windows
 ```
-streamlitapp\Scripts\activate
+poemgenerator\Scripts\activate
 ```
 
 ### Install all packages used here
